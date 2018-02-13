@@ -39,7 +39,7 @@ func jsonHandler(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println(string(j))
 
-	// Using j*son.Encoder to write directly to the response writer
+	// Using *json.Encoder to write directly to the response writer
 	decoder := json.NewEncoder(w)
 	decoder.Encode(&resp)
 }
